@@ -3,9 +3,14 @@ import React from "react";
 
 export default class ClickityClick extends React.Component{
 
-    updateState = (state) => {
-        this.setState({
-            hasBeenClicked: state
+    updateState = () => {
+        this.setState(previousState=>{
+
+            
+            return {
+                hasBeenClicked: !previousState.hasBeenClicked
+            }
+            
         })
     }
     state = {
